@@ -15,5 +15,6 @@ subtraction_python_C = stu_score_table["Python"] - stu_score_table["C语言"]
 print(f"Python课程与C语言课程成绩的差值为：{subtraction_python_C}")
 
 # 求解问题2
-avg_score = float((stu_score_table["Python"]+stu_score_table["English"]+stu_score_table["C语言"]) / len(stu_score_table))
+# Python 3.x中 / -> float,而在Python 2.x中 / -> int(即：对运算结果进行了截取==C语言处理方式)
+avg_score = (stu_score_table["Python"]+stu_score_table["English"]+stu_score_table["C语言"]) / len(stu_score_table)
 print(f"该学生3门课程成绩平均分为{avg_score}")
