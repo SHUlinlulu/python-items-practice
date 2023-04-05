@@ -1,5 +1,8 @@
 """
     测试使用Python中的fetchone(),fetchmany(size),fetchall()方法获取结果集result中的数据
+    注意：
+        1.使用fetchone()依次从结果集中取出一个个记录,直至结果集中记录被取完(即：取出的记录就不再在结果集中了)
+        2.fetchmany(size)与fetchall()也是如此
 """
 # import corresponding modules
 import pymysql
