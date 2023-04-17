@@ -10,6 +10,7 @@ with open('baidu.html', mode='w') as file:
     file.write(response.read().decode("utf-8"))
     # response.read()获取的数据信息编码为字节码---->需要解码（utf-8）---->str
 print("over!")
+response.close()
 """
 Web请求过程刨析：----进入网络页面，‘检查或F12’，查看‘network’--回车刷新数据
     服务器端渲染：baidu.com为例，输入关键字信息，返回的关键字信息与html页面嵌在一起，即数据在Html页面中----后续需要提取

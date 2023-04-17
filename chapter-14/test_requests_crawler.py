@@ -23,4 +23,5 @@ response = requests.get(url=url, headers=headers)  # 发起请求
 print(response.text)  # 获得返回的页面源代码--html
 print(response)
 
+response.close()
 # 简言之。requests相当于对于urllib作了一个简化的操作

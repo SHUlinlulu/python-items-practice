@@ -17,6 +17,7 @@ print(response.json())  # 将服务器返回数据解析成json格式--> dict(py
 for element in response.json()['data']:
     print(element['k'], f":{element['v']}")
 
+response.close()  # 关闭，否则keep-alive占用容易堵塞
 """
     启发：可以根据此案例开发一个可视化接口专门做百度翻译的英译汉单词接口小程序
 """
