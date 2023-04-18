@@ -6,7 +6,7 @@
 from urllib.request import urlopen
 # 2.打开网址
 response = urlopen('https://www.baidu.com')  # 获取的相应response中包含许多东西，如：响应码/响应头部信息...
-with open('baidu.html', mode='w') as file:
+with open('baidu.html', mode='w', encoding="utf-8") as file:  # 不加encoding,容易乱码
     file.write(response.read().decode("utf-8"))
     # response.read()获取的数据信息编码为字节码---->需要解码（utf-8）---->str
 print("over!")
