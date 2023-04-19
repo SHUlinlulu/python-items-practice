@@ -33,7 +33,7 @@ for sub_link in sub_links:
     try:
         image_src = bs_sub_div.find("img").get("src")
     except:
-        continue
+        continue  # 以防止有的子页面没有"big-pic"标签，而终止程序运行----以防万一
     image_name = image_src.split("/")[-1]
     image_resp = requests.get(image_src)
     image_content = image_resp.content
